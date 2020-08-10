@@ -1,53 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
-import 'package:audioplayers/audio_cache.dart';
+# assets_app
 
-void main() => runApp(MyApp());
+A new Flutter project.
 
-var EmailButton = Icon(Icons.email);
-var AccountButton = Icon(Icons.account_circle);
+## Getting Started
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Assets App'),
-          backgroundColor: Colors.amber,
-          actions: <Widget>[
-            EmailButton,
-            AccountButton,
-          ],
-        ),
-        body: Center(
-          child: Container(
-            width: 300,
-            height: 300,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Card(
-                color: Colors.amber,
-                child: Column(
-                  children: <Widget>[
-                    Card(
-                      margin: EdgeInsets.all(30),
-                      child: Image.asset('images/dev_photo.jpeg'),
-                    ),
-                    Card(
-                      color: Colors.blue,
-                      child: RaisedButton(onPressed: () {
-                        var audio = AudioCache();
-                        audio.play('ringtone1.mp3');
-                      }),
-                    ),
-                  ],
-                )),
-          ),
-        ),
-      ),
-    );
-  }
-}
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
